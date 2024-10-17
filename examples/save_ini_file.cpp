@@ -7,7 +7,12 @@
 #include <inicpp.h>
 #include <iostream>
 
-int main(int argc, char **argv)
+#if defined(BUILD_MONOLITHIC)
+#define main ini_save_ini_file_example_main
+#endif
+
+extern "C"
+int main(int argc, const char **argv)
 {
     if(argc != 2)
     {

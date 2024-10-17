@@ -78,7 +78,12 @@ namespace ini
     };
 }
 
-int main()
+#if defined(BUILD_MONOLITHIC)
+#define main    ini_custom_type_conversion_example_main
+#endif
+
+extern "C"
+int main(void)
 {
     // create some ini content that we can parse
     std::string content = "[Foo]\nintList=1,2,3,4,5,6,7,8\ndoubleList=3.4,1.2,2.2,4.7";

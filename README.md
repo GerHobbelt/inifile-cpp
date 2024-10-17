@@ -29,7 +29,7 @@ single function call or use the overloaded constructor.
 ```cpp
 #include <inicpp.h>
 
-int main()
+int main(void)
 {
     // create istream object "is" ...
 
@@ -48,7 +48,7 @@ and automatically parses its contents:
 ```cpp
 #include <inicpp.h>
 
-int main()
+int main(void)
 {
     // load an ini file
     ini::IniFile myIni;
@@ -61,7 +61,7 @@ You can enable decoding of multi-line values using the  ```setMultiLineValues(tr
 ```cpp
 #include <inicpp.h>
 
-int main()
+int main(void)
 {
     // load an ini file
     ini::IniFile myIni;
@@ -75,7 +75,7 @@ When duplicate fields are decoded the previous value is simply overwritten by de
 ```cpp
 #include <inicpp.h>
 
-int main()
+int main(void)
 {
     // load an ini file
     ini::IniFile myIni;
@@ -127,7 +127,7 @@ The content of the inifile can then be written to any ```std::ostream``` object.
 ```cpp
 #include <inicpp.h>
 
-int main()
+int main(void)
 {
     // create ostream object "os" ...
 
@@ -148,7 +148,7 @@ and automatically stores the ini file contents:
 ```cpp
 #include <inicpp.h>
 
-int main()
+int main(void)
 {
     ini::IniFile myIni;
 

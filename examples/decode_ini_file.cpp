@@ -7,7 +7,12 @@
 #include <inicpp.h>
 #include <iostream>
 
-int main()
+#if defined(BUILD_MONOLITHIC)
+#define main ini_decode_ini_file_example_main
+#endif
+
+extern "C"
+int main(void)
 {
     // create some ini content
     std::string content = "[Foo]\nhello=world\nnum=123\n[Test]\nstatus=pass\n[Nothing]";

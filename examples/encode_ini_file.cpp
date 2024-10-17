@@ -7,7 +7,12 @@
 #include <inicpp.h>
 #include <iostream>
 
-int main()
+#if defined(BUILD_MONOLITHIC)
+#define main ini_encode_ini_file_example_main
+#endif
+
+extern "C"
+int main(void)
 {
     ini::IniFile inif;
 
